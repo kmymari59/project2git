@@ -34,7 +34,28 @@ main {
     text-align: center;
     margin: 100px 0;
     display: flex;
-    justify-content: space-around; /*子元素貼齊頭尾，中間分散*/
+    justify-content: space-around; /*子元素平均分配寬度*/
+  }
+
+  .check_option{
+    display: block;
+    width: 15vw;
+
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: 0.2em;
+
+    color: #C39681;
+    text-decoration: none;
+  }
+
+  .check_option::after{
+    content: ""; /*必寫，content 就算沒內容也一定要寫*/
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #C39681;
   }
   
 
@@ -48,8 +69,8 @@ main {
   }
 
   .list_item{
-    width: 35vw;
-    margin: 0 40px 40px;
+    width: 45vw;
+    margin: 0 30px 40px;
     position: relative;
   }
 
@@ -62,14 +83,17 @@ main {
     width: 20vw;
     height: 20vw;
     
+    height: 300px;
+    width: 300px;
+
     /* flex-shrink: 0; 暫時固定Size */
 
 }
 
 figure img{
     object-fit: cover; /*會覆蓋且自動置中*/
-    height: 300px;
-    width: 300px;
+    height: 100%;
+    width: 100%;
     border-radius: 10px 10px 0 0;/*圓角*/
     overflow:hidden; /*溢出時，內容自動隱藏，這樣圓角才會出來*/
 }
@@ -81,6 +105,6 @@ figure img{
     position: absolute;
     top: 45px;
     left: 60px;
-    padding: 20px 50px 40px 17vw; /*上右下左*/
+    padding: 20px 50px 40px 265px; /*上右下左*/
     z-index: -1;
 }

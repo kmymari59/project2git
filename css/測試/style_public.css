@@ -1,0 +1,78 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap'); /*中文-思源黑體 Regular 400*/
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Noto+Sans+TC&display=swap');/*英文-GFS Didot Regular 400 */
+
+/*
+*{margin: 0; padding: 0} 
+會清空"全部標籤"的margin跟padding，但效能會低一點
+*/
+
+/*
+Reset css 的網站 
+http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;/*用於RWD，可以讓容器的邊框跟內距不累加*/
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: /*⻄文*/ -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    /*中文*/ "蘋方-繁", "PingFang TC", "Noto Sans TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", sans-serif;
+    /*
+    字型名稱有空格的、兩個單字的、中文字的，都要有引號
+    中間用-或一個單字的，可不用引號
+    不確定就通通引號
+    最後面 sans-serif 代表，如果前面的字體都沒有，就去抓電腦有的無襯線字
+    */
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*共用*/
+img{
+    display: block;
+    /* width: 100px; */
+    /*img預設會空一行空白，所以用block把這個設定改掉
+    PS 圖片通常不會直接襬，都會用div包起來
+    */
+}
+

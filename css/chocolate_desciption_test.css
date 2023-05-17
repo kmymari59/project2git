@@ -86,6 +86,7 @@ main {
   width: 42vw;
   margin: 0 30px 40px;
   position: relative;
+  z-index: -1;
 }
 
 
@@ -130,6 +131,7 @@ figure img {
 
 /* 右側 */
 .list_right {
+
   height: 300px;
   color: #613134;
   background: linear-gradient(125.78deg, #C39681 23.06%, rgba(227, 227, 227, 0.6) 58.7%, #C39681 99.24%);
@@ -140,7 +142,7 @@ figure img {
   padding: 20px 50px 40px 200px;
   border-radius: 10px;
   /*上右下左*/
-  z-index: -1;
+  z-index: -2;
 }
 
 .list_right h2 {

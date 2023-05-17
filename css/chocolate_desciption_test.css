@@ -27,6 +27,42 @@ main {
   /*object-fit: cover; 會覆蓋且自動置中*/
   width: 100%;
   height: 450px;
+  position: relative;
+  z-index: -1;
+}
+
+.banner_text {
+  position: absolute;
+  right: 105px;
+  top: 130px;
+  width: 590px;
+  color: #613134;
+}
+
+.banner_text h2 {
+  height: 70px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.2em;
+  position: relative;
+}
+
+.banner_text h2::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #613134;
+
+  position: absolute;
+  bottom: 0px;
+}
+
+.banner_text p {
+  font-size: 16px;
+  line-height: 47px;
+  letter-spacing: 0.1em;
 }
 
 /* 中間的篩選器區 */
@@ -37,6 +73,7 @@ main {
   display: flex;
   justify-content: space-around;
   /*子元素平均分配寬度*/
+  
 }
 
 .check_option {
@@ -53,6 +90,7 @@ main {
 
   height: 54px;
   position: relative;
+  z-index: -1;
 }
 
 .check_option::after {
@@ -76,7 +114,7 @@ main {
   /* 水平置中 */
 
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   /*暫時撐開*/
 
   flex-wrap: wrap
@@ -143,6 +181,10 @@ figure img {
   border-radius: 10px;
   /*上右下左*/
   z-index: -2;
+}
+.bg-silver{
+  color: #ffffff;
+  background: linear-gradient(123.07deg, #848282 24.29%, rgba(132, 130, 130, 0.7) 59.37%, #848282 100%);
 }
 
 .list_right h2 {

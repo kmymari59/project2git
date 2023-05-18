@@ -10,19 +10,34 @@ main {
     font-family: 'Noto Sans TC', sans-serif;
 }
 
-#banner #news {
-    margin-top: 60px;
+#banner #about_con {
+    /* margin-top: 60px; */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #banner {
-    background-image: url(../images/news/banner_big.png);
+    
     background-size: cover;
     background-position: center;
 
     /*object-fit: cover; 會覆蓋且自動置中*/
     width: 100%;
-    height: 220px;
+    height: 400px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner_text{
+    width: 400px;
+    height: 400px;
+    background-color: #E6DEDD;
+}
+
+.banner_img{
+    background-image: url(../images/about/banner_big.png);
+    width: 40vw;
+    height: 400px;
 }

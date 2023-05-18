@@ -1,6 +1,6 @@
 main {
     /* margin-top: 60px; */
-
+    /* height: 200vh; */
     display: flex;
     flex-direction: column;
     /*垂直排*/
@@ -10,7 +10,7 @@ main {
     font-family: 'Noto Sans TC', sans-serif;
 }
 
-#banner #about_con {
+#banner #about_info {
     /* margin-top: 60px; */
     display: flex;
     flex-direction: column;
@@ -18,7 +18,7 @@ main {
 }
 
 #banner {
-    
+
     background-size: cover;
     background-position: center;
 
@@ -30,14 +30,75 @@ main {
     justify-content: space-between;
 }
 
-.banner_text{
-    width: 400px;
+.banner_text {
+    width: 30vw;
     height: 400px;
     background-color: #E6DEDD;
+
+    /* text-align: center; */
+    color: #613134;
+    padding-top: 162px;
+
 }
 
-.banner_img{
+.banner_text_cn {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.2em;
+
+    margin-left: 7vw;
+}
+
+.banner_text_en {
+    font-family: 'GFS Didot', serif;
+    ;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 48px;
+    letter-spacing: 0.2em;
+
+    margin-top: 18px;
+    margin-left: 12vw;
+
+}
+
+.banner_img {
     background-image: url(../images/about/banner_big.png);
+    background-position: center center;
     width: 40vw;
     height: 400px;
+
+    position: relative;
+}
+
+.shop_ivfo {
+    width: 544px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgba(97, 49, 52, 0.9);
+
+    position: absolute;
+    top: 300px;
+    left: -100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:flex-start;
+
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+
+}
+
+.shop_ivfo p{
+    margin-left: 36px;
+}
+
+#about{
+    height: 1200px;
 }

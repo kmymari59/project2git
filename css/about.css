@@ -100,14 +100,29 @@ main {
 }
 
 #about{
+    margin-top: 130px;
     height: 1200px; /*撐篙*/
     display: flex;
 }
 
 .ig{
-    width: 384px;
+    background-image: url(../images/about/ig.png);
+    width: 468px;
     height: 830px;
 }
+
+.fb{
+    background-image: url(../images/about/fb.png);
+    width: 763px;
+    height: 202px;
+}
+
+.map{
+    background-image: url(../images/about/map.png);
+    width: 763px;
+    height: 503px;
+}
+
 
 
 

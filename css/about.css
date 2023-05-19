@@ -100,5 +100,14 @@ main {
 }
 
 #about{
-    height: 1200px;
+    height: 1200px; /*撐篙*/
+    display: flex;
 }
+
+.ig{
+    width: 384px;
+    height: 830px;
+}
+
+
+

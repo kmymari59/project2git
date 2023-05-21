@@ -100,27 +100,43 @@ main {
 }
 
 #about{
-    margin-top: 130px;
-    height: 1200px; /*撐篙*/
     display: flex;
+    margin: 130px 0px 124px;
 }
 
 .ig{
+    flex:1;
     background-image: url(../images/about/ig.png);
-    width: 468px;
-    height: 830px;
+    background-repeat: no-repeat; /*不重複*/
+    background-size:contain; /*自動縮放*/
+    width: 30vw;
+    
+    margin-right: 120px;
+}
+
+.about_right{
+    flex:1;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    height: 50vw;
 }
 
 .fb{
     background-image: url(../images/about/fb.png);
-    width: 763px;
-    height: 202px;
+    background-repeat: no-repeat; /*不重複*/
+    background-size:contain; /*自動縮放*/
+
+    width: 40vw;
+    height: 100%;
 }
 
 .map{
     background-image: url(../images/about/map.png);
-    width: 763px;
-    height: 503px;
+    background-repeat: no-repeat; /*不重複*/
+    background-size:contain; /*自動縮放*/
+    width: 40vw;
+    height: 110%;
 }
 
 

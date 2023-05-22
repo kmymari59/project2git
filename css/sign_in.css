@@ -1,0 +1,40 @@
+main {
+    /* margin-top: 60px; */
+    /* height: 200vh; */
+    display: flex;
+    flex-direction: column;
+    /*垂直排*/
+    align-items: center;
+    /*副軸(水平)置中*/
+
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+#banner #sign {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #banner {
+    background-image: url(../images/sign_in/sing_in_banner2.png);
+    background-size: cover;
+    background-position: center;
+  
+    /*object-fit: cover; 會覆蓋且自動置中*/
+    width: 100%;
+    height: 225px;
+    position: relative;
+    z-index: -1;
+  }
+
+#sign_in{
+    height: 30vh;
+}
+
+
+
+
+
+

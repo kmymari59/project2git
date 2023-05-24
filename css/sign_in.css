@@ -173,6 +173,15 @@ form input[type=submit] {
 
 }
 
+.btn {
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  color: #FFFFFF;
+
+}
+
 
 
 /* 預設值樣式 */

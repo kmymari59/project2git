@@ -1,0 +1,142 @@
+main {
+    /* margin-top: 60px; */
+
+    display: flex;
+    flex-direction: column;
+    /*垂直排*/
+    align-items: center;
+    /*副軸(水平)置中*/
+
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+#banner #customization {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#banner {
+    background-image: url(../images/news/banner_big.png);
+    background-size: cover;
+    background-position: center;
+
+    /*object-fit: cover; 會覆蓋且自動置中*/
+    width: 100%;
+    height: 220px;
+}
+
+.title {
+    color: #613134;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.2em;
+
+    text-align: center;
+    margin: 100px;
+}
+
+.title::after {
+    content: "";
+    /*必寫，content 就算沒內容也一定要寫*/
+    display: block;
+    width: 20%;
+    height: 1px;
+    background-color: #613134;
+    margin: auto;
+    /*水平置中*/
+}
+
+/*內容區*/
+/*整體*/
+#accordion {
+    width: 1050px;
+    height: 100vh;/*暫時撐高*/
+}
+
+#accordion h3 {
+    /*外框*/
+    width: 1050px;
+    height: 50px;
+    background: #E6DEDD;
+    border-radius: 10px;
+
+    /*文字*/
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color: #613134;
+    line-height: 50px;
+
+    margin-top: 52px;
+}
+
+/*客製選擇區-Step1*/
+
+.quantity{
+    display:flex;
+    justify-content: space-between;/*貼頭尾，中間均分*/
+    margin-right: 32px;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+.radio [type="radio"]:checked+label,
+.radio [type="radio"]:not(:checked)+label {
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+    line-height: 40px;
+    display: inline-block;
+    color: #613134;
+}
+
+.radio [type="radio"]:checked+label:before,
+.radio [type="radio"]:not(:checked)+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #613134;
+    border-radius: 100%;
+    background: #fff;
+}
+
+.radio [type="radio"]:checked+label:after,
+.radio [type="radio"]:not(:checked)+label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #C39681;
+    position: absolute;
+    top: 14px;
+    left: 6px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.radio [type="radio"]:not(:checked)+label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.radio [type="radio"]:checked+label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+/*客製選擇區-Step2*/
+
+/*客製選擇區-Step3*/
+

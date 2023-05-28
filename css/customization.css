@@ -52,7 +52,8 @@ main {
 /*整體*/
 #accordion {
     width: 1050px;
-    height: 100vh;/*暫時撐高*/
+    height: 100vh;
+    /*暫時撐高*/
 }
 
 #accordion h3 {
@@ -71,15 +72,17 @@ main {
     line-height: 50px;
 
     margin-top: 52px;
+    padding-left: 12px;
 }
 
 /*客製選擇區-Step1*/
-
-.quantity{
-    display:flex;
-    justify-content: space-between;/*貼頭尾，中間均分*/
+.quantity {
+    display: flex;
+    justify-content: space-between;
+    /*貼頭尾，中間均分*/
     margin-right: 32px;
 }
+
 
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
@@ -136,7 +139,39 @@ main {
     transform: scale(1);
 }
 
+
 /*客製選擇區-Step2*/
+  /*
+  .grid{
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  
+  .grid-sizer{
+    width: 25%;
+  }
+  
+  .element-item{
+    width: 25%;
+    padding: 0 15px;
+  }
+  
+  商品內容
+  
+  .thumbnail img {
+      width: 100%;
+  }
+  
+  .caption {
+      height: 120px;
+  }
+  
+  .thumbnail .caption-full {
+      padding: 9px;
+      color: #333;
+  }
+*/
+
 
 /*客製選擇區-Step3*/
-

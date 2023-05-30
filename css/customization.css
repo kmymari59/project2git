@@ -10,6 +10,10 @@ main {
     font-family: 'Noto Sans TC', sans-serif;
 }
 
+body{
+    background-image: url(../images/customization/bg_confirm.png);
+}
+
 #banner #customization {
     margin-top: 60px;
     display: flex;
@@ -52,8 +56,9 @@ main {
 /*整體*/
 #accordion {
     width: 1050px;
-    height: 100vh;
-    /*暫時撐高*/
+    /* height: 100vh; 暫時撐高 */
+    
+    margin-bottom: 80px;
 }
 
 #accordion h3 {
@@ -142,38 +147,71 @@ main {
 /*客製選擇區-Step2*/
 
 
-/*客製選擇區-Step2 參考*/
-  /*
-  .grid{
+.choho_list {
+    display: flex;
+    /*item們水平排*/
+    flex-wrap: wrap;
+    /*寬度不夠就換行*/
+
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+.choco_item {
+    width: 20%;
+    margin-top: 40px;
+}
+
+.choco_item figure,
+.choco_item figure img {
     width: 95%;
-    margin: 0 auto;
-    padding-top: 30px;
-  }
-  
-  .grid-sizer{
-    width: 25%;
-  }
-  
-  .element-item{
-    width: 25%;
-    padding: 0 15px;
-  }
-  
-  商品內容
-  
-  .thumbnail img {
-      width: 100%;
-  }
-  
-  .caption {
-      height: 120px;
-  }
-  
-  .thumbnail .caption-full {
-      padding: 9px;
-      color: #333;
-  }
-*/
+    display: flex;
+    justify-content: center;
+}
+
+.quan {
+    /*商品 -[___]+ 區*/
+    width: 95%;
+    display: flex;
+    justify-content: space-between;/*貼頭尾*/
+    align-items: center;/*副軸置中*/
+    margin-top: 20px;
+}
+
+.qty {
+    /*-[___]+的數字框*/
+    width: 100px;
+    text-align: center;
+
+    background: #FFFFFF;
+    border: 1px solid #613134;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
 
 
 /*客製選擇區-Step3*/
+
+.box_list {
+    display: flex;
+    /*item們水平排*/
+    flex-wrap: wrap;
+    /*寬度不夠就換行*/
+
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+.box_item {
+    width: 30%;
+    margin-top: 40px;
+}
+
+.box_item figure,
+.box_item figure img {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+}
+
+

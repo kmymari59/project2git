@@ -10,7 +10,7 @@ main {
     font-family: 'Noto Sans TC', sans-serif;
 }
 
-body{
+body {
     background-image: url(../images/customization/bg_confirm.png);
 }
 
@@ -57,7 +57,7 @@ body{
 #accordion {
     width: 1050px;
     /* height: 100vh; 暫時撐高 */
-    
+
     margin-bottom: 80px;
 }
 
@@ -78,7 +78,67 @@ body{
 
     margin-top: 52px;
     padding-left: 12px;
+
+    /* 字跟按鈕 */
+    display: flex;
+    flex-direction:row-reverse; /*span被自動生成在標題字前面，只好先反過來排*/
+    justify-content: space-between; /*貼頭尾*/
 }
+
+/* 按鈕測試
+
+已知被選擇的面板，h3(跟自動生成的span)為
+<h3 class="ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-active ui-state-active" 
+role="tab" id="ui-id-1" aria-controls="ui-id-2" aria-selected="true" aria-expanded="true" tabindex="0">
+<span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s"></span>選擇顆數</h3>
+
+沒有被選擇的面板
+<h3 class="ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" 
+role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1">
+<span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>選擇口味</h3>
+
+感覺可以控制
+h3下的span位置 & ui-accordion-header-active(啟用)下的span 跟 ui-accordion-header-collapsed 沒啟用的span
+
+*/
+
+h3 span{
+    width: 50px;
+    height: 50px;
+    /* 預設要是檢的 */
+    background-image: url(../images/customization/Collapse.png);
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+.ui-accordion-header-active span{
+    background-image: url(../images/customization/Collapse.png);
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+.ui-accordion-header-collapsed span{
+    background-image: url(../images/customization/add.png);
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*客製選擇區-Step1*/
 .quantity {
@@ -144,6 +204,9 @@ body{
     transform: scale(1);
 }
 
+
+
+
 /*客製選擇區-Step2*/
 
 
@@ -173,8 +236,10 @@ body{
     /*商品 -[___]+ 區*/
     width: 95%;
     display: flex;
-    justify-content: space-between;/*貼頭尾*/
-    align-items: center;/*副軸置中*/
+    justify-content: space-between;
+    /*貼頭尾*/
+    align-items: center;
+    /*副軸置中*/
     margin-top: 20px;
 }
 
@@ -213,5 +278,3 @@ body{
     display: flex;
     justify-content: center;
 }
-
-

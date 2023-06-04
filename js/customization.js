@@ -1,41 +1,42 @@
 $(function () {
+    var size=0;
+
     // 全體收合
     $("#accordion").accordion({
         heightStyle: "content",
     });
 
 
-    /*
-    一版(現在會跟著一起動)
-    onselect參考
-    https://www.cnblogs.com/wxlkeepmoving/p/3162396.html
-    
-    https://blog.51cto.com/u_15064631/4027190
-    */
-    const minus = $('.qtyminus');
-    const plus = $('.qtyplus');
-    const input = $('.qty');
-    minus.click(function (e) {
-        e.preventDefault();
-        var value = input.val();
-        if (value > 1) {
-            value--;
-        }
-        input.val(value);
-    });
+    //STEP1
+    $('input[type=radio]').change(function(){
+        size=$(this).val(); //取得radio的值
+        // alert(size);
+    }); 
 
-    plus.click(function (e) {
-        e.preventDefault();
-        var value = input.val();
-        value++;
-        input.val(value);
-    })
 
+    // STEP2
     /*
     參考 (可以分開的)
     https://codepen.io/ahmetaksungur/pen/QWNEKXq
     */
 
+    /* 數量增減 */
+    $(".increment").click(function () {
+        // 數量增加時，只有同一層的.qty會增加
+        var n = $(this).siblings(".qty").val();
+        n++;
+        $(this).siblings(".qty").val(n);
+    })
+    $(".decrement").click(function () {
+        // 數量減少時，只有同一層的.qty會減少
+        // 數量最少只到0
+        var n = $(this).siblings(".qty").val();
+        if (n == 0) {
+            return false;
+        }
+        n--;
+        $(this).siblings(".qty").val(n);
+    });
 
-    
+
 });

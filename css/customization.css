@@ -102,6 +102,7 @@ h3下的span位置 & ui-accordion-header-active(啟用)下的span 跟 ui-accordi
 
 */
 
+/* 展開收合按鈕 */
 h3 span{
     width: 50px;
     height: 50px;
@@ -123,9 +124,12 @@ h3 span{
     background-position: center;
 }
 
+/* 選擇的幾入提示 */
 
-
-
+h3:first-child span::before{
+    content: "已選 四入禮盒";
+    margin-left: -350%;
+}
 
 
 

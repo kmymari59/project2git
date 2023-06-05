@@ -81,8 +81,10 @@ body {
 
     /* 字跟按鈕 */
     display: flex;
-    flex-direction:row-reverse; /*span被自動生成在標題字前面，只好先反過來排*/
-    justify-content: space-between; /*貼頭尾*/
+    flex-direction: row-reverse;
+    /*span被自動生成在標題字前面，只好先反過來排*/
+    justify-content: space-between;
+    /*貼頭尾*/
 }
 
 /* 按鈕測試
@@ -103,45 +105,33 @@ h3下的span位置 & ui-accordion-header-active(啟用)下的span 跟 ui-accordi
 */
 
 /* 展開收合按鈕 */
-h3 span{
+h3 span {
     width: 50px;
     height: 50px;
     /* 預設要是檢的 */
     background-image: url(../images/customization/Collapse.png);
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
-.ui-accordion-header-active span{
+.ui-accordion-header-active span {
     background-image: url(../images/customization/Collapse.png);
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
-.ui-accordion-header-collapsed span{
+.ui-accordion-header-collapsed span {
     background-image: url(../images/customization/add.png);
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 /* 選擇的幾入提示 */
 
-h3:first-child span::before{
-    content: "已選 四入禮盒";
-    margin-left: -350%;
+.hit {
+    /*用JS長出來的*/
+    margin-left: -190px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*客製選擇區-Step1*/
@@ -256,6 +246,20 @@ h3:first-child span::before{
     border: 1px solid #613134;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+}
+
+.increment{
+    /* + 按鈕*/
+    position: relative;
+}
+
+
+/* 選擇超過時的提示*/
+.over{
+    width: 150px;
+    position: absolute;
+    top:30px;
+    right: 19px;
 }
 
 

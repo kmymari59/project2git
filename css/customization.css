@@ -55,15 +55,19 @@ body {
 /*內容區*/
 /*整體*/
 #accordion {
-    width: 1050px;
-    /* height: 100vh; 暫時撐高 */
+    /* width: 1050px; */
+    width: 70vw;
+    max-width:1050px;
 
+    /* height: 100vh; 暫時撐高 */
     margin-bottom: 80px;
 }
 
 #accordion h3 {
     /*外框*/
-    width: 1050px;
+    /* width: 1050px; */
+    width: 100%;
+
     height: 50px;
     background: #E6DEDD;
     border-radius: 10px;
@@ -205,18 +209,28 @@ h3 span {
 
 
 .choho_list {
+    width: calc(100% + 30px);
     display: flex;
     /*item們水平排*/
     flex-wrap: wrap;
     /*寬度不夠就換行*/
 
     margin-top: 40px;
-    justify-content: space-between;
+    justify-content: flex-start
+    /* justify-content: space-between; */
+
 }
 
 .choco_item {
-    width: 20%;
+    /* width: 20%; */
+    width: 200px;
+    height: 200px;
     margin-top: 40px;
+    margin-right: 10px;
+}
+
+.choco_item:last-child{
+    margin-right: 0;
 }
 
 .choco_item figure,
@@ -248,17 +262,17 @@ h3 span {
     border-radius: 10px;
 }
 
-.increment{
+.increment {
     /* + 按鈕*/
     position: relative;
 }
 
 
 /* 選擇超過時的提示*/
-.over{
+.over {
     width: 150px;
     position: absolute;
-    top:30px;
+    top: 30px;
     right: 19px;
 }
 
@@ -266,6 +280,7 @@ h3 span {
 /*客製選擇區-Step3*/
 
 .box_list {
+    /* width: calc(100% + 100px); */
     display: flex;
     /*item們水平排*/
     flex-wrap: wrap;
@@ -277,12 +292,51 @@ h3 span {
 
 .box_item {
     width: 30%;
+    max-width:300px;
     margin-top: 40px;
+    position: relative;
+    /* justify-content: flex-start; */
+    /* margin-right: 70px; */
+}
+
+.box_item:last-child{
+    margin-right: 0px;
 }
 
 .box_item figure,
 .box_item figure img {
-    width: 95%;
+    width: 100%;
     display: flex;
     justify-content: center;
+}
+
+
+
+/* hover會顯示和名稱 */
+.box_item span {
+    opacity: 0; /*一開始不顯示文字*/
+    position: absolute;
+    top: 44%;
+    left: 33%;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+}
+
+.box_item:hover .spanBG{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    border-radius: 10px;
+}
+
+.box_item:hover span {
+    opacity: 1; /*被hover再顯示*/
 }

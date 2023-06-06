@@ -48,6 +48,9 @@ $(function () {
     */
 
     /* 數量增減 */
+
+    
+
     $(".increment").click(function () {
         if(size == 0){
             alert("請先選擇顆數");

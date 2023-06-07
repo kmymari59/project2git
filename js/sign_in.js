@@ -8,6 +8,7 @@
 
 // var sign_num = "";
 
+
 $(function () {
     // constants
     var SHOW_CLASS = 'show',
@@ -99,7 +100,7 @@ $(function () {
         const formElement = document.getElementById("form_in");
         const accText = formElement[0].value;
         const pwText = formElement[1].value;
-
+        
         //如果num有取得值，表示陣列有這個帳號，如果num是null代表沒有
         //密碼陣列同一個位置，如果密碼也一樣就可以登入
         sign_num = acc.get(accText);  //num型態是number
@@ -113,4 +114,8 @@ $(function () {
 
         return false;
     });
+
+    
 });
+
+

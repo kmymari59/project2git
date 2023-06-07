@@ -293,6 +293,7 @@ h3 span {
 
     margin-top: 40px;
     justify-content: space-between;
+
 }
 
 .box_item {
@@ -346,4 +347,28 @@ h3 span {
 .box_item:hover span {
     opacity: 1;
     /*被hover再顯示*/
+}
+
+/* btn_下一步 */
+
+#next {
+    width: 140px;
+    height: 45px;
+    background: #613134;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    
+    margin-bottom: 80px;
+}
+
+#next a {
+    display:block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+
+    text-align: center;
+    line-height: 45px;
 }

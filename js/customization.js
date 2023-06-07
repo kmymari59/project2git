@@ -1,7 +1,9 @@
 $(function () {
-    var size = 0;
-    var box='h3:first-child span'
-    var chocoTot = 0;
+    var size = 0; //step1
+    var box = 'h3:first-child span' //step1
+    var chocoTot = 0; //step1
+    var chocoBox = "";
+    var eroText = ""; //下一步
 
     // 全體收合
     $("#accordion").accordion({
@@ -49,10 +51,8 @@ $(function () {
 
     /* 數量增減 */
 
-    
-
     $(".increment").click(function () {
-        if(size == 0){
+        if (size == 0) {
             alert("請先選擇顆數");
         }
         // 數量增加時(且總數未超過)，只有同一層的.qty會增加
@@ -74,7 +74,7 @@ $(function () {
     })
 
     $(".decrement").click(function () {
-        if(size == 0){
+        if (size == 0) {
             alert("請先選擇顆數");
         }
 
@@ -85,7 +85,7 @@ $(function () {
         }
 
         // 總數真的減少時，提示文字才會消失 (避免按了沒有選的巧克李的-，提示字也會不見)
-        if(chocoTot<=size){
+        if (chocoTot <= size) {
             $('.over').remove();
         }
 
@@ -96,6 +96,54 @@ $(function () {
         console.log(chocoTot);
     });
 
+    // STEP3
+    $(".spanBG").click(function () {
+        // 參考https://ithelp.ithome.com.tw/articles/10216523
+        //$(this).parent(".box_item").addClass('boxClick'); 在選中的父層添加class
+        //$(this).parent().siblings(".box_item").removeClass('boxClick');  把其他的class清掉
+
+        //$(this).siblings("figure").addClass('boxClick'); 在選中的同層figure添加class
+        //$(this).parent().siblings().find("figure").removeClass('boxClick');  把其他的class清掉
+
+        $(this).siblings("figure").find("img").addClass('boxClick');  //在選中項目的img添加class
+        $(this).parent().siblings().find("figure").find("img").removeClass('boxClick');//把其他項目的img class移除
+
+        chocoBox = document.getElementsByClassName("boxClick")[0].alt;//取得img的alt
+        // console.log(chocoBox);
+    });
+
+    $("#next").click(function () {
+        eroText = "";
+
+        if (size != 0 && chocoTot == size && chocoBox != "") {
+            // 條件都滿足才可以跳轉下一頁
+            window.location.href = './confirm.html';
+        }
+
+        //沒先選顆數，step2會被上面擋，所以size只判斷有沒有選
+
+
+        if (size == 0) {
+            eroText += "未選擇巧克力";
+        }
+
+        if (size != 0 && chocoTot < size) {
+            eroText += "未選足巧克力數量"
+        }
+        if(chocoBox=="" && eroText ==""){
+            eroText+="未選擇包裝"
+        }else if(chocoBox==""){
+            eroText+="、未選擇包裝"
+        }
+        // if (chocoBox == "") {
+        //     eroText += "未選擇包裝"
+        // }
+
+        if (eroText != "") {
+            alert(eroText);
+        }
+
+    });
 
 
 

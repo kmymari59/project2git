@@ -349,6 +349,15 @@ h3 span {
     /*被hover再顯示*/
 }
 
+
+/* 禮盒被選時 */
+.boxClick{
+    border: #613134 4px dashed;
+    padding: 10px;
+}
+
+
+
 /* btn_下一步 */
 
 #next {

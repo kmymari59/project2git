@@ -1,4 +1,3 @@
-import sign_num from "./sign_in.js";
 $(function () {
     var size = 0; //step1
     var box = 'h3:first-child span' //step1

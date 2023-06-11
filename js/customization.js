@@ -110,6 +110,7 @@ $(function () {
 
         chocoBox = document.getElementsByClassName("boxClick")[0].alt;//取得img的alt
         // console.log(chocoBox);
+        
     });
 
     $("#next").click(function () {

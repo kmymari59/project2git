@@ -106,6 +106,7 @@ $(function () {
         sign_num = acc.get(accText);  //num型態是number
         if (sign_num != null && pwText == password[sign_num]) {
             alert("登入成功");
+            window.location.href = 'ordersearch.html';
         } else if (sign_num == null) {
             alert("此帳號不存在");
         } else if (pwText != password[sign_num]) {

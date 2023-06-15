@@ -76,6 +76,21 @@ body {
     }
 }
 
+@media (max-width:820px) {
+
+    @keyframes expand {
+
+        /* title下的線的動畫 */
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 145px;
+        }
+    }
+}
+
 /*內容區*/
 /*整體*/
 #accordion {

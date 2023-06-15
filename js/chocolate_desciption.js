@@ -18,12 +18,8 @@ $(document).ready(function () {
         for (let i = 0; i < allItems.length; i++) {
             const item = allItems[i];
             if (!item.classList.contains('morning')) {
-                // item.style.visibility = 'hidden';
-                // item.style.height = 0;
-                item.style={
-                    visibility:'hidden',
-                    height:0
-                };
+                item.style.visibility = 'hidden';
+                item.style.height = 0;
             }
         }
         $(".check_list li").removeClass("active_color");

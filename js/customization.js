@@ -120,7 +120,7 @@ $(function () {
 
         if (size != 0 && chocoTot == size && chocoBox != "") {
             // 條件都滿足才可以跳轉下一頁
-            window.location.href = 'confirm.html';
+            window.location.href = './confirm.html';
         }
 
         //沒先選顆數，step2會被上面擋，所以size只判斷有沒有選
@@ -148,7 +148,6 @@ $(function () {
 
     });
 
-    // memo 要再處理回上一頁問題
 
 
 });

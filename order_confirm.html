@@ -27,21 +27,26 @@
         <nav class="navigation">
             <ul id="menu">
                 <li><a class="menu_option" href="news.html">最新消息</a></li>
-                <li><a class="menu_option" href="#">客製禮盒</a></li>
+                <li><a class="menu_option" href="customization.html">客製禮盒</a></li>
                 <li><a class="menu_option" href="chocolate_desciption.html">巧克力介紹</a></li>
                 <li><a class="menu_option" href="about.html">關於我們</a></li>
             </ul>
             <ul class="icon">
                 <li>
-                    <a class="icon_option" href="#">
+                    <a class="icon_option" href="cart.html">
                         <img src="images/index/購物車.svg" alt="購物車">
                     </a>
                 </li>
-                <li>
-                    <a class="icon_option" href="#">
+                <li class="member">
+                    <a class="icon_option" href="sign_in.html">
                         <img src="images/index/會員.svg" alt="會員">
                     </a>
                 </li>
+                <div class="member_list">
+                    <li class="member_op"><a class="menu_option" href="sign_in.html">會員登入/註冊</a></li>
+                    <li class="member_op"><a class="menu_option" href="edit.html">聯絡資料修改</a></li>
+                    <li class="member_op"><a class="menu_option" href="ordersearch.html">會員訂單查詢</a></li>
+                </div>
             </ul>
         </nav>
         <button class="hamburger">
@@ -52,7 +57,8 @@
     </header>
     <main>
         <section id="banner">
-            <lottie-player src="https://lottie.host/00c29677-7d2d-484e-91f7-c257a77ef05d/fHEiTsdLlZ.json" background="transparent" speed="0.5" style="width: 100%; height: 100%;" autoplay></lottie-player>
+            <lottie-player src="https://lottie.host/00c29677-7d2d-484e-91f7-c257a77ef05d/fHEiTsdLlZ.json"
+                background="transparent" speed="0.5" style="width: 100%; height: 100%;" autoplay></lottie-player>
         </section>
         <section id="content">
             <div class="tittle_confirm">
@@ -62,23 +68,35 @@
                 <table id="item_list">
                     <thead>
                         <tr id="text">
-                            <th>品項名稱</th>
-                            <th>數量</th>
-                            <th>金額</th>
+                            <th class="col">品項名稱</th>
+                            <th class="col">數量</th>
+                            <th class="col">金額</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr id="text">
-                            <td>經典緞帶-六入禮盒</td>
+                            <td>
+                                <div class="img">
+                                    <img src="images/customization/box_1.png" alt="">
+                                </div>
+                                <span>經典綁帶1-六入禮盒</span>
+                            </td>
                             <td class="quan">1盒</td>
                             <td>$360</td>
                         </tr>
-                        <tr id="info_card">
+                        <tr id="text">
+                            <td>
+                                <div class="img">
+                                    <img src="images/customization/box_2.png" alt="">
+                                </div>
+                                <span>經典綁帶2-八入禮盒</span>
+                            </td>
+                            <td class="quan">1盒</td>
+                            <td>$480</td>
+                        </tr>
+                        <!-- <tr id="info_card">
                             <td colspan="3">
                                 <div class="img_info">
-                                    <div class="img">
-                                        <img src="images/order_confirm/item.png" alt="">
-                                    </div>
                                     <div class="item_info">
                                         <h3 class="chocolate">巧克力</h3>
                                         <table id="items">
@@ -100,13 +118,13 @@
                                         </table>
                                         <h3 class="warm">暖心小卡</h3>
                                         <div class="warm_content">
-                                            <p>我們非常榮幸宣布，我們的藍莓巧克力與當地一家優格品牌合作，推出了一種全新的美味組合！這種新組合完美地結合了堅果巧克力的豐富風味和優格的清爽口感，為您帶來一種獨特的口味體驗。這種藍莓巧克力與優格聯名的產品現在已經在我們的商店上市，快來品嚐吧！
+                                            <p>祝你生日快樂！希望你的生日充滿歡樂和美好的回憶。愛是一個獨特的存在，讓我們一起翱翔在生命的旅程中，享受生命的美好，讓每個人都能夠擁有自己的愛。
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </td>
-                        </tr>
+                        </tr> -->
                         <tr>
                             <td id="line" colspan="3">
                                 <hr>
@@ -116,37 +134,37 @@
                 </table>
             </div>
             <div class="total">
-                <h2>商品金額：　<span>$360</span></h2>
+                <h2>商品金額：　<span>$840</span></h2>
                 <h2>運費：　<span>$80</span></h2>
-                <h2>應付金額：　<span>$440</span></h2>
+                <h2>應付金額：　<span>$920</span></h2>
             </div>
             <div class="pay_dely">
                 <h2>付款及收件資訊</h2>
-                <div id="PD_items" class="">
+                <div id="PD_items" class="pay">
                     <h3>付款方式：</h3>
                     <h4>貨到付款</h4>
                 </div>
-                <div id="PD_items" class="">
+                <div id="PD_items" class="pick">
                     <h3>取貨方式：</h3>
                     <h4>宅配到府(運費$80)</h4>
                 </div>
-                <div id="PD_items" class="">
+                <div id="PD_items" class="name">
                     <h3>收件人姓名：</h3>
                     <h4>林茗茗</h4>
                 </div>
-                <div id="PD_items" class="">
+                <div id="PD_items" class="tel">
                     <h3>聯絡電話：</h3>
                     <h4>02-1234-5678</h4>
                 </div>
-                <div id="PD_items" class="">
+                <div id="PD_items" class="email">
                     <h3>Email：</h3>
                     <h4>a1234bc@gmail.com</h4>
                 </div>
-                <div id="PD_items" class="">
+                <div id="PD_items" class="address">
                     <h3>收件地址：</h3>
                     <h4>台北市中正區濟南路一百段999號</h4>
                 </div>
-                <div id="PD_items" class="">
+                <div id="PD_items" class="invoice">
                     <h3>發票種類：</h3>
                     <h4>隨商品附上紙本發票</h4>
                 </div>
@@ -165,30 +183,30 @@
                 <p>商品將在下單後2~4個工作天（不含例假日）出貨 </p>
                 <div class="step_button_comp">
                     <a href="index(ch).html" id="to_index">回首頁</a>
-                    <a href="" id="order_track">訂單查詢</a>
+                    <a href="ordersearch.html" id="order_track">訂單查詢</a>
                 </div>
             </div>
         </div>
     </main>
     <footer>
-        <a class="tittle_footer" href="">CHOCOLLAGE</a>
         <div class="menu_f">
+            <a class="tittle_footer" href="">CHOCOLLAGE</a>
             <ul id="menu_footer">
-                <li><a class="menu_option_f" href="index(ch).html">首頁</a></li>
+                <!-- <li><a class="menu_option_f" href="index(ch).html">首頁</a></li> -->
                 <li><a class="menu_option_f" href="news.html">最新消息</a></li>
-                <li><a class="menu_option_f" href="">客製禮盒</a></li>
-                <li><a class="menu_option_f" href="">巧克力介紹</a></li>
-                <li><a class="menu_option_f" href="">全部商品</a></li>
-                <li><a class="menu_option_f" href="">沁心晨曦</a></li>
+                <li><a class="menu_option_f" href="customization.html">客製禮盒</a></li>
+                <li><a class="menu_option_f" href="chocolate_desciption.html">巧克力介紹</a></li>
+                <!-- <li><a class="menu_option_f" href="">全部商品</a></li> -->
+                <!-- <li><a class="menu_option_f" href="">沁心晨曦</a></li>
                 <li><a class="menu_option_f" href="">成熟風韻</a></li>
                 <li><a class="menu_option_f" href="">莓果盛宴</a></li>
-                <li><a class="menu_option_f" href="">輕鬆一刻</a></li>
-                <li><a class="menu_option_f" href="">關於我們</a></li>
-                <li><a class="menu_option_f" href="">營業時間</a></li>
-                <li><a class="menu_option_f" href="">營業據點</a></li>
-                <li><a class="menu_option_f" href="">會員</a></li>
-                <li><a class="menu_option_f" href="">會員訂單查詢</a></li>
-                <li><a class="menu_option_f" href="">修改會員資訊</a></li>
+                <li><a class="menu_option_f" href="">輕鬆一刻</a></li> -->
+                <li><a class="menu_option_f" href="about.html">關於我們</a></li>
+                <!-- <li><a class="menu_option_f" href="">營業時間</a></li>
+                <li><a class="menu_option_f" href="">營業據點</a></li> -->
+                <li><a class="menu_option_f" href="sign_in.html">會員</a></li>
+                <li><a class="menu_option_f" href="ordersearch.html">訂單查詢</a></li>
+                <!-- <li><a class="menu_option_f" href="">修改會員資訊</a></li> -->
             </ul>
         </div>
         <div id="info">

@@ -88,8 +88,6 @@ $(function () {
                 formElement[i].value = "";
             }
             Swal.fire({
-                // 彈出錯誤訊息
-                // 使用 https://sweetalert2.github.io/#icons 
                 imageUrl: 'images/order_confirm/icon-check-circle.svg',
                 confirmButtonText: "註冊成功",
                 customClass: {
@@ -98,8 +96,6 @@ $(function () {
             });
         }else{
             Swal.fire({
-                // 彈出錯誤訊息
-                // 使用 https://sweetalert2.github.io/#icons 
                 icon: 'error',
                 title: ero_up,
                 text: '請重新輸入',

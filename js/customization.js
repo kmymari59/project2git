@@ -131,23 +131,31 @@ $(function () {
 
 
         if (size == 0) {
-            eroText += "未選擇巧克力";
+            eroText += "請選擇顆數及口味\n";
         }
 
         if (size != 0 && chocoTot < size) {
-            eroText += "未選足巧克力數量"
+            eroText += "請至選擇口味補足巧克力數量\n"
         }
-        if (chocoBox == "" && eroText == "") {
-            eroText += "未選擇包裝"
-        } else if (chocoBox == "") {
-            eroText += "、未選擇包裝"
-        }
-        // if (chocoBox == "") {
+        // if (chocoBox == "" && eroText == "") {
         //     eroText += "未選擇包裝"
+        // } else if (chocoBox == "") {
+        //     eroText += "、未選擇包裝"
         // }
+        if (chocoBox == "") {
+            eroText += "請選擇包裝"
+        }
 
         if (eroText != "") {
-            alert(eroText);
+            // alert(eroText);
+            Swal.fire({
+                icon: 'error',
+                title: eroText,
+                // text: '請重新輸入',
+                customClass: {
+                    title: 'my-title-class-up',
+                }
+            });
         }
 
     });

@@ -57,9 +57,12 @@
     </header>
     <main>
         <div id="banner"></div>
+        <div class="pg_title">
+            <h1 class="title">編輯會員資料</h1>
+        </div>
         <section id="edit">
             <!-- 會員登入/註冊按鈕區 -->
-            <h2>編輯會員資料</h2>
+            <!-- <h2>編輯會員資料</h2> -->
 
             <!-- 會員登入畫面 -->
             <form autocomplete="off">
@@ -82,7 +85,7 @@
                             <select name="district" id="district_box">
                                 <option value="">選擇鄉鎮市區</option>
                             </select>
-                            <input type="text" id="zipcode_box" placeholder="郵遞區號">
+                            <input type="text" id="zipcode_box" placeholder="郵遞區號" disabled><!-- disabled 上鎖，不可自行登打-->
                         </div>
                         <input type="text" id="address" name="address">
                     </div>

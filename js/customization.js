@@ -127,13 +127,11 @@ $(function () {
         // 如果總數大於size，跳出提醒，且將該欄位歸0
         if(txtQty>size){
             // console.log("數量超過");
+            txtQty-=$(this).val();
             $(this).siblings().prepend(`<p class="over">超過上限，重新選擇</p>`);
             $(this).val(0);
-            return false;
         }
-        if(txtQty<=size){
-            chocoTot=txtQty;
-        }
+        chocoTot=txtQty;
     });
 
 

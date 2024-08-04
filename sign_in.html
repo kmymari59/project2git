@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHOCOLLAGE</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <title>會員登入、註冊</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Noto+Sans+TC:wght@400;500&display=swap"
@@ -17,10 +18,10 @@
 <body>
     <header>
         <div class="logo_title">
-            <a class="logo" href="index(ch).html">
+            <a class="logo" href="index.html">
                 <img src="images/index/Black and White Collection 10.svg" alt="logo">
             </a>
-            <a class="title" href="index(ch).html">
+            <a class="title" href="index.html">
                 CHOCOLLAGE
             </a>
         </div>
@@ -72,7 +73,7 @@
             <div id="sign_in" class="form-action show">
                 <form id="form_in">
                     <label for="account">帳號</label>
-                    <input type="text" name="account" id="account" value="">
+                    <input type="text" name="account" id="account" value="test">
                     <!-- value預設值，是會存給資料庫的 -->
                     <!-- disabled 禁用，通常不能修改的值會用禁用(因為顯示樣式會跟只讀不一樣) -->
 
@@ -93,7 +94,7 @@
             <div id="sign_up" class="form-action hide" style="display:none">
                 <form id="form_up">
                     <label for="account">帳號</label>
-                    <input type="text" name="account" id="account" value="">
+                    <input type="text" name="account" id="account" value="test">
                     <!-- value預設值，是會存給資料庫的 -->
                     <!-- disabled 禁用，通常不能修改的值會用禁用(因為顯示樣式會跟只讀不一樣) -->
 
@@ -106,7 +107,7 @@
 
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" title="請輸入Email" placeholder="yourid@email.com"
-                        autocomplete="on">
+                    value="a1234bc@gmail.com" autocomplete="on">
                     <!-- autocomplete="on" 預設是off，打開在打的時候，就會有打過的記錄可以選 -->
                     <p>(此表單欄位僅為示意，無蒐集資料功能)</p>
                     <div class="btn_div">
@@ -126,7 +127,7 @@
         <div class="menu_f">
             <a class="tittle_footer" href="">CHOCOLLAGE</a>
             <ul id="menu_footer">
-                <!-- <li><a class="menu_option_f" href="index(ch).html">首頁</a></li> -->
+                <!-- <li><a class="menu_option_f" href="index.html">首頁</a></li> -->
                 <li><a class="menu_option_f" href="news.html">最新消息</a></li>
                 <li><a class="menu_option_f" href="customization.html">客製禮盒</a></li>
                 <li><a class="menu_option_f" href="chocolate_desciption.html">巧克力介紹</a></li>
@@ -148,7 +149,7 @@
             營業時間：8:00 AM~8:00PM<br>
             電話：0923845338
         </div>
-        <div id="copyright">@CHOCOLLAGE 2023</div>
+        <div id="copyright">@CHOCOLLAGE 2023 (學生練習作品)</div>
     </footer>
     <!-- jQuery 3.7.0 -->
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"

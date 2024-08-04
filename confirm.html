@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow" />
     <title>訂單確認</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,10 +18,10 @@
 <body>
     <header>
         <div class="logo_title">
-            <a class="logo" href="index(ch).html">
+            <a class="logo" href="index.html">
                 <img src="images/index/Black and White Collection 10.svg" alt="logo">
             </a>
-            <a class="title" href="index(ch).html">
+            <a class="title" href="index.html">
                 CHOCOLLAGE
             </a>
         </div>
@@ -32,13 +33,14 @@
                 <li><a class="menu_option" href="about.html">關於我們</a></li>
             </ul>
             <ul class="icon">
-                <li>
-                    <a class="icon_option" href="cart.html">
+                <li id="cart_fra">
+                    <a id="cart" class="icon_option" href="cart.html">
                         <img src="images/index/購物車.svg" alt="購物車">
                     </a>
+                    <p id="cart_num">(<span>0</span>)</p>
                 </li>
                 <li class="member">
-                    <a class="icon_option" href="sign_in.html">
+                    <a class="icon_option" href="javascript:void(0)">
                         <img src="images/index/會員.svg" alt="會員">
                     </a>
                 </li>
@@ -99,7 +101,7 @@
             </div>
             <div class="step_button">
                 <a href="customization.html" id="back">回上一步</a>
-                <a href="" id="toCart">加入購物車</a>
+                <img class="flyCart" src="images/index/購物車.svg" alt=""><a href="" id="toCart">加入購物車</a>
             </div>
         </section>
     </main>
@@ -107,7 +109,7 @@
         <div class="menu_f">
             <a class="tittle_footer" href="">CHOCOLLAGE</a>
             <ul id="menu_footer">
-                <!-- <li><a class="menu_option_f" href="index(ch).html">首頁</a></li> -->
+                <!-- <li><a class="menu_option_f" href="index.html">首頁</a></li> -->
                 <li><a class="menu_option_f" href="news.html">最新消息</a></li>
                 <li><a class="menu_option_f" href="customization.html">客製禮盒</a></li>
                 <li><a class="menu_option_f" href="chocolate_desciption.html">巧克力介紹</a></li>
@@ -129,12 +131,13 @@
             營業時間：8:00 AM~8:00PM<br>
             電話：0923845338
         </div>
-        <div id="copyright">@CHOCOLLAGE 2023</div>
+        <div id="copyright">@CHOCOLLAGE 2023 (學生練習作品)</div>
     </footer>
 </body>
 <!-- jQuery 3.7.0 -->
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"
     integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script src="JS/hamburger.js"></script>
+<script src="JS/confirm.js"></script>
 
 </html>

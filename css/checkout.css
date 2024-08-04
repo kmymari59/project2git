@@ -26,16 +26,55 @@
     width: 100%;
 }
 
-#content h1 {
-    width: 280px;
-    height: 52px;
-    border-bottom: 1px solid #613134;
+.tittle_confirm h1 {
     margin: 0 auto 35px auto;
     text-align: center;
     font-size: 24px;
     line-height: 38px;
     letter-spacing: 0.2em;
     color: #613134;
+    position: relative;
+}
+
+.tittle_confirm h1::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background-color: #613134;
+
+    animation: expand 0.35s linear forwards;
+}
+
+@keyframes expand {
+
+    /* title下的線的動畫 */
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 20%;
+    }
+}
+
+
+@media (max-width:820px) {
+
+    @keyframes expand {
+
+        /* title下的線的動畫 */
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 145px;
+        }
+    }
 }
 
 /* 填寫資訊區 */
@@ -43,7 +82,7 @@
     width: 65%;
     min-width: 600px;
     max-width: 1050px;
-    min-height: 900px;
+    min-height: 800px;
     margin: 0 auto;
 }
 
@@ -201,7 +240,10 @@ form label,
     width: 75px;
     margin-right: 0;
 }
-
+/* 地址區 */
+#address_fra {
+    display: none;
+}
 /* 載具條碼 */
 #carrier_number {
     display: none;

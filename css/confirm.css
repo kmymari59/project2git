@@ -41,9 +41,11 @@ th {
     letter-spacing: 0.2em;
     color: #FFFFFF;
 }
+
 tr td:first-child {
     padding-left: 2rem;
 }
+
 td {
     font-size: 16px;
     line-height: 38px;
@@ -64,6 +66,21 @@ td {
     object-fit: cover;
 }
 
+/* 購物車icon數量顯示 */
+#cart_fra {
+    position: relative;
+}
+
+#cart_num {
+    font-size: 16px;
+    font-family: 'Noto Sans TC';
+    position: absolute;
+    right: -22px;
+    bottom: 16px;
+    color: #000;
+    display: none;
+}
+
 /* 確認清單 */
 #content {
     position: relative;
@@ -78,16 +95,55 @@ td {
     width: 100%;
 }
 
-#content h1 {
-    width: 280px;
-    height: 52px;
-    border-bottom: 1px solid #613134;
+.tittle_confirm h1 {
     margin: 0 auto 60px auto;
     text-align: center;
     font-size: 24px;
     line-height: 38px;
     letter-spacing: 0.2em;
     color: #613134;
+    position: relative;
+}
+
+.tittle_confirm h1::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background-color: #613134;
+
+    animation: expand 0.35s linear forwards;
+}
+
+@keyframes expand {
+
+    /* title下的線的動畫 */
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 20%;
+    }
+}
+
+
+@media (max-width:820px) {
+
+    @keyframes expand {
+
+        /* title下的線的動畫 */
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 145px;
+        }
+    }
 }
 
 #item_thead th:nth-child(1) {
@@ -156,6 +212,10 @@ textarea:focus {
     padding-bottom: 60px;
     display: flex;
     justify-content: space-between;
+    position: relative;
+}
+.step_button img {
+    opacity: 0;
 }
 
 #back,
@@ -171,17 +231,56 @@ textarea:focus {
     padding: 6px 36px;
 }
 
+.b-flying-img {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    animation: fly 0.8s 1;
+}
+
+@keyframes fly {
+    0% {
+        -moz-transform: rotate(0deg);
+        /* Для Firefox */
+        -ms-transform: rotate(0deg);
+        /* Для IE */
+        -o-transform: rotate(0deg);
+        /* Для Opera */
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+        /* Для Firefox */
+        -ms-transform: rotate(360deg);
+        /* Для IE */
+        -o-transform: rotate(360deg);
+        /* Для Opera */
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+
 @media (max-width: 576px) {
 
     tr th:first-child {
         padding-left: 1rem;
     }
+
     tr td:first-child {
         padding-left: 1rem;
     }
+
     h2 {
         padding: 0 1rem;
     }
+
     #back,
     #toCart {
         font-size: 16px;
@@ -190,5 +289,9 @@ textarea:focus {
 
     td {
         font-size: 14px;
+    }
+
+    #toCart::after {
+        right: 3.6rem;
     }
 }
